@@ -10,6 +10,11 @@ def download():
     options = {
         'format' : 'bestaudio/best',
         'keepvideo' : False,
+        'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
         'outtmp1' : filename,
     }
 
